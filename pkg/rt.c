@@ -89,20 +89,6 @@ bool rt_delete_rt_entry(rt_table_t *rt_table,
     return false;
 }
 
-// Update a specific routing table entry (stub)
-bool rt_update_rt_entry(rt_table_t *rt_table,
-                        char *dest,
-                        char mask,
-                        char *new_gw_ip,
-                        char *new_oif) {
-    return true;
-}
-
-// Clear all routing table entries (stub)
-void rt_clear_rt_table(rt_table_t *rt_table) {}
-
-// Free all routing table entries (stub)
-void rt_free_rt_table(rt_table_t *rt_table) {}
 
 // Dump the content of the routing table to stdout
 void rt_dump_rt_table(rt_table_t *rt_table) {
