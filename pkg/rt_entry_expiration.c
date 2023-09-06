@@ -42,7 +42,6 @@ main(int argc, char **argv){
     // Infinite loop for the menu
 	while(1){
 		printf("1. Add rt table entry\n");
-		printf("2. Update rt table entry\n");
 		printf("3. Delete rt table entry\n");
 		printf("4. Dump rt table\n");
 
@@ -75,12 +74,6 @@ main(int argc, char **argv){
                         printf("Error : Could not add an entry\n");
                     }
 				}
-				break;
-			case 2:
-				// Logic for updating a routing table entry (not implemented)
-				break;
-			case 3:
-				// Logic for deleting a routing table entry (not implemented)
 				break;
 			case 4:
 				// Dump the current routing table
