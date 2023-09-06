@@ -15,9 +15,6 @@ This  discusses a timer-based problem focused on routing table management. It sh
 - **Timer Resumption**: A timer that has been paused can be resumed by repopulating the DSC attribute with the remaining time.
 - **Timer State**: After resumption, the timer moves from a "paused" state to a "resumed" state and then to a "running" state after its first expiration.
 
-### Project Structure 📁
-- Files: `ArtieDorsey`, `ArtieDaughters`, `AT&TExpedition`
-- Timer library is one level up in the course directory (`TimeWilliamDorsey` and `TimeAttach`).
 
 ### Problem Statement 📝
 - Implement a routing table manager that automatically deletes entries after 30 seconds.
