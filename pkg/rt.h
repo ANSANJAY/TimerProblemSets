@@ -46,17 +46,39 @@ void rt_dump_rt_table(rt_table_t *rt_table);
 static inline void rt_entry_remove(rt_table_t *rt_table, rt_entry_t *rt_entry){
     // Remove the entry here
     // Logic varies depending on whether entry is at head, tail, or middle
+if(!rt_entry->prev){
+        if(rt_entry->next){
+            rt_entry->next->prev = 0;
+            rt_table->head = rt_entry->next;
+            rt_entry->next = 0;
+            return;
+        }
+		rt_table->head = NULL;
+        return;
+    }
+    if(!rt_entry->next){
+        rt_entry->prev->next = 0;
+        rt_entry->prev = 0;
+        return;
+    }
+
+    rt_entry->prev->next = rt_entry->next;
+    rt_entry->next->prev = rt_entry->prev;
+    rt_entry->prev = 0;
+    rt_entry->next = 0;
+
 }
 
 // Macros to simplify iterating over the routing table
 #define ITERATE_RT_TABLE_BEGIN(rt_table_ptr, rt_entry_ptr)                \
 {                                                                         \
-    // Initialization logic for iterating over the routing table
-}
+        rt_entry_t *_next_rt_entry;                                           \
+    for((rt_entry_ptr) = (rt_table_ptr)->head;                            \
+            (rt_entry_ptr);                                               \
+            (rt_entry_ptr) = _next_rt_entry) {                            \
+        _next_rt_entry = (rt_entry_ptr)->next;
 
-#define ITERATE_RT_TABLE_END(rt_table_ptr, rt_entry_ptr)                  \
-{                                                                         \
-    // Cleanup logic for iterating over the routing table
-}
+
+#define ITERATE_RT_TABLE_END(rt_table_ptr, rt_entry_ptr) }}                 \
 
 #endif // __RT__
