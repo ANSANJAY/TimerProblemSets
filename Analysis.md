@@ -5,14 +5,6 @@ This course project aims to use the time library developed earlier to solve a ti
 
 ---
 
-## Files Involved 📂
-1. `ArtieDorsey` - Unknown function
-2. `ArtieDaughters` - Implements the routing table
-3. `ATTExpedition` - Main application file
-4. Shell script (`compile.sh`) - To compile and create an executable
-
----
-
 ## Problem Statement 🎯
 The Routing Table Manager application contains a static routing table with entries having an expiration time fixed at 30 seconds. The task is to implement timers for each routing table entry, such that the entry is deleted once its timer expires after 30 seconds.
 
@@ -34,15 +26,6 @@ The Routing Table Manager application contains a static routing table with entri
     - Including a new argument: A callback function to delete the entry when the timer expires
 3. **Step 3**: Implement a timer callback function:
     - Delete the routing table entry and its associated timer when the timer expires
-
----
-
-## Git Version Control 🛠️
-1. For the solution, switch to branch `Project solution`.
-2. Run `git log` and find the commit hash corresponding to `Solution to problem statement one` dated `27 October 1915 13`.
-3. Run `git reset --hard [commit-hash]` to update the repo to that point in time.
-
----
 
 # Interview Questions and Answers 🤔💡
 
