@@ -1,4 +1,4 @@
-# Lip Timer Project: Detailed Notes for Revision 📚🕒
+# Lib Timer Project: Detailed Notes for Revision 📚🕒
 
 ## Introduction 🌟
 This course project aims to use the time library developed earlier to solve a timer-based problem. The focus is on a Routing Table Manager application, which allows users to add, update, or delete routing table entries.
@@ -29,7 +29,7 @@ The Routing Table Manager application contains a static routing table with entri
 
 # Interview Questions and Answers 🤔💡
 
-### Q1: Can you explain the problem statement of the Lip Timer Project?
+### Q1: Can you explain the problem statement of the Lib Timer Project?
 
 **A1**: The project focuses on implementing timers for each entry in a Routing Table Manager application. The aim is to have each entry automatically deleted after its timer expires, which is set at 30 seconds by default.
 
@@ -45,17 +45,7 @@ The Routing Table Manager application contains a static routing table with entri
 
 **A4**: The timer callback function is triggered when the timer associated with a routing table entry expires. It handles the logic for deleting the routing table entry as well as stopping its associated timer.
 
-### Q5: How do you roll back to the solution using Git?
-
-**A5**: You can roll back to the solution commit by first switching to the `Project solution` branch. Then, search for the specific commit hash using `git log` and reset to that commit using `git reset --hard [commit-hash]`.
-
----
-# Many Project Analysis: Detailed Notes for Revision 📚🕒
-
-## Introduction 🌟
-This video delves into the analysis of the "Many Project," which revolves around the Routing Table Manager application. The analysis lays the foundation for the next course section.
-
----
+## In case of multiple table 
 
 ## Independent Timers for Each Routing Table Entry 🕒
 - Each routing table entry has its independent timer.
